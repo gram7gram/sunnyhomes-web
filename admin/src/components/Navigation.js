@@ -23,15 +23,15 @@ class Navigation extends PureComponent {
                    className="u-header u-header--full-container u-header--abs-top u-header--show-hide shadow-sm p-0 m-0"
                    data-header-fix-moment="500"
                    data-header-fix-effect="slide">
-      <div className="u-header__section pt-3">
+      <div className="u-header__section">
 
         <div id="logoAndNav" className="container">
           <nav className="navbar navbar-expand u-header__navbar u-header__navbar--no-space p-0">
 
-            <a className="navbar-brand u-header__navbar-brand u-header__navbar-brand-center p-0"
-               href="">
-              Logo
-            </a>
+            <Link className="navbar-brand u-header__navbar-brand u-header__navbar-brand-center p-0"
+                  to={Pages.HOME}>
+              <img src="/img/logo-small.jpg" alt="" className="img-fluid img-logo"/>
+            </Link>
 
             <ul className="navbar-nav u-header__navbar-nav text-center">
 

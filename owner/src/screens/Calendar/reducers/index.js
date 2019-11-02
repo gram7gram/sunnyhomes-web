@@ -1,6 +1,7 @@
 import {combineReducers} from 'redux'
 import * as Action from '../actions'
 import moment from 'moment'
+import i18n from '../../../i18n'
 
 const events = (prev = [], action) => {
   switch (action.type) {
@@ -9,8 +10,15 @@ const events = (prev = [], action) => {
     case Action.FETCH_SUCCESS:
       return action.payload.bookings.map(item => {
 
+        let title
+        if (!item.id) {
+          title = item['guest-name'] || item.notice || item.type
+        } else {
+          title = i18n.t('calendar.blockedPlaceholder')
+        }
+
         return {
-          title: item['guest-name'] || item.notice || item.type,
+          title,
           start: moment(item.arrival, 'YYYY-MM-DD'),
           end: moment(item.departure, 'YYYY-MM-DD').add(1, 'day'), //calendar does not display last day!
           allDay: true,
