@@ -25,6 +25,7 @@ app.use('/api/v1', AdminRESTController);
 //Owner API
 app.use('/api/v1', SmoobuController);
 
+app.use(express.static(path.resolve(__dirname, '../public')))
 
 app.all('*', (req, res) => {
   res.status(404).json({

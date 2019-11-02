@@ -1,0 +1,15 @@
+
+certbot certonly \
+    --webroot --webroot-path /var/www/sunnyhomes-web/admin/build \
+    -m r.schoenfelder@gmail.com \
+    -d backend.sunnyhomes.com.cy
+
+certbot certonly \
+    --webroot --webroot-path /var/www/sunnyhomes-web/owner/build \
+    -m r.schoenfelder@gmail.com \
+    -d owner.sunnyhomes.com.cy
+
+certbot certonly \
+    --webroot --webroot-path /var/www/sunnyhomes-web/api/public \
+    -m r.schoenfelder@gmail.com \
+    -d api.sunnyhomes.com.cy
