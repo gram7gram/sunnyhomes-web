@@ -13,3 +13,6 @@ certbot certonly \
     --webroot --webroot-path /var/www/sunnyhomes-web/api/public \
     -m r.schoenfelder@gmail.com \
     -d api.sunnyhomes.com.cy
+
+cron
+0 0 1 * * crontab renew
