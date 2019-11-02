@@ -12,7 +12,7 @@ const config = {
   },
   production: {
     port: 80,
-    host: 'http://api.sunnyhomes.com.cy',
+    host: 'https://api.sunnyhomes.com.cy',
     mongoHost: 'mongodb://db/sunnyhomes',
     secret: '****',
     smoobu: {

@@ -5,7 +5,7 @@ const config = {
     apiHost: 'http://0.0.0.0:7601',
   },
   production: {
-    apiHost: 'http://api.sunnyhomes.com.cy',
+    apiHost: 'https://api.sunnyhomes.com.cy',
   }
 }
 
